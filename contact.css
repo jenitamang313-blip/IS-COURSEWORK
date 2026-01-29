@@ -1,0 +1,346 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+}
+body{
+  background:#a5d07a;
+}
+/*NAVBAR*/
+.navbox{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #69A84F;
+}
+.navbox .logo{
+    margin: 0px -40px;
+}
+.navbox .logo img{
+    height: 50px;
+    border: none;
+    outline: none;
+}
+.navbox ul{
+    display: flex;
+    list-style: none;
+    cursor: pointer;
+}
+.navbox ul li a{
+    margin: 20px;
+    font-size: 19px;
+    font-weight: 600;
+    font-family: 'roboto';
+    position: relative;
+    color: #354332;
+    text-decoration: none;
+
+}
+.navbox ul li a::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: #354332;
+        border-radius: 10px;
+        position: absolute;
+        left: 0;
+        bottom: -3px;
+        transition: .5s;   
+}
+.navbox ul li a:hover::after{
+    width: 100%;
+}
+.navbox ul li a:hover::after,
+ .navbox ul li a.active::after{
+    color: #333333;
+    width: 100%;
+}
+.research{
+   margin: 20px;
+    font-size: 19px;
+    font-weight: 600;
+    font-family: 'roboto';
+    position: relative;
+    color: #354332;
+    text-decoration: none;
+    list-style: none;
+}
+.searchbar{
+    width: max-content;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    border-radius: 24px;
+    background: #f6f6f6;
+    transition: .5s;
+}
+
+.searchbar input{
+    font-size: 16px;
+    color: #333333;
+    margin-left: 14px;
+    width: 70px;
+    outline: none;
+    border: none;
+    background: transparent;
+    transition: .5s;
+}
+.searchbar input:focus{
+    width: 200px;
+}
+.sign-in{
+    border: 1px solid #eee;
+    height: 40px;
+    width: 90px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #000;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cart{
+    font-size: 28px;
+    color: #fffefe;
+    font-weight: 500;
+    position: relative;
+}
+.cart span{
+    position: absolute;
+    font-size: 16px;
+    height: 20px;
+    background: red;
+    width: 20px;
+    border-radius: 50%;
+    display: flex;
+    top: 0;
+    right: -20px;
+    align-items: center;
+    justify-content: center;
+    font-family: sans-serif;
+}
+/*form*/
+.form{
+    border-radius: 20px;
+    width: 350px;
+    height: max-content;
+    margin: 70px 500px;
+    padding: 10px;
+    background: rgb(94, 191, 115);
+    display: none;
+    position: fixed;
+}
+.showform{
+    display: block;
+}
+.form .hed{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.form .hed .close{
+    width: 50px;
+}
+.inp{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+.inp label{
+    margin: 5px 0px;
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 600;
+}
+.inp input{
+    height: 20px;
+    padding: 10px 20px;
+    font-size: 17px;
+    background: #e8f6ea;
+    border: none;
+    border-radius: 10px;
+    
+}
+.error-message{
+    margin: 5px 20px;
+    color: red;
+    font-family: 'poppins', sans-serif;
+}
+.overlay{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    opacity: 0;
+    top: 0%;
+}
+.showoverlay{
+    opacity: 1;
+    z-index: 0;
+}
+.acc{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.close{
+    height: 40px;
+    font-size: 30px;
+    font-weight: 800;
+    margin: -20px -8px 0px 0px;
+    border: none;
+    background: transparent;
+}
+.log-in{
+    width: 180px;
+    height: 50px;
+    margin: 20px 60px;
+    font-size: 17px;
+    font-weight: 800;
+    border: none;
+    border-radius: 20px;
+    background: #088178;
+    color: #eee;
+}
+/*CONTENT*/
+.contact-wrapper{
+    padding:30px;
+}
+
+.contact-top{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    gap:30px;
+}
+.help-box h3{
+    text-transform: uppercase;
+    padding: 20px 0px;
+    font-weight: 800;
+}
+.help-box, .address-box, .suggest-box, .service{
+    background:#bfe0a8;
+    padding:20px;
+    border:2px solid #03760b;
+    border-radius: 30px;
+    font-family: 'Poppins', sans-serif;
+    text-transform: capitalize;
+    height: 250px;
+    width:30%;
+}
+.address-box h3{
+    font-weight: 800;
+}
+.address-box p{
+    font-size: 14.5px;
+    font-family: 'poppins',sans-serif;
+}
+.suggest-box h3{
+    text-transform: uppercase;
+    padding: 20px 0px;
+    font-weight: 800;
+}
+.service h3{
+    text-transform: uppercase;
+    padding: 20px 0px;
+    font-weight: 800;
+}
+/*form box*/
+.form-box{
+    border: 2px solid #03760b;
+    border-radius: 20px;
+    background: #bfe0a8;
+    width: max-content;
+    min-width: 500px;
+    margin: 0px 400px;
+}
+
+.form-title{
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    text-transform: uppercase;
+    text-decoration: underline;
+    width: max-content;
+    min-width: 300px;
+    margin: 10px 99px;
+    border-radius: 20px;
+}
+
+.contact-form{
+    display:flex;
+    flex-direction:column;
+    justify-content: center;
+    gap:10px;
+    max-width:500px;
+    margin: 0px 20px;
+}
+.contact-form h3{
+    text-transform: capitalize;
+    font-size: 17px;
+    font-weight: 800;
+}
+.contact-form input, textarea{
+    padding:10px;
+    border:none;
+    border-radius: 10px;
+    background: #f6f6f6;
+    border: none;
+}
+
+.contact-form button{
+    background: rgb(3, 163, 67);
+    color:white;
+    padding:10px;
+    border:none;
+    border-radius: 20px;
+    width: 250px;
+    margin: 20px 140px;
+}
+.mess-btn{
+    font-size: 17px;
+    font-weight: 700;
+}
+
+.bottom{
+    background: #b6d7a8;
+    padding: 20px;
+    cursor: pointer;
+}
+.eco{
+    font-size: 30px;
+    text-transform: capitalize;
+}
+.eco span{
+    color: green;
+}
+.bott-box p{
+    font-size: 16px;
+    font-weight: 500;
+    font-family: 'roboto';
+    color: #838383;
+    text-transform: capitalize;
+}
+.links{
+    font-size: 20px;
+    font-family: 'roboto', sans-serif;
+    text-transform: capitalize;
+    text-decoration: underline;
+    margin-top: 10px;
+}
+.soci i{
+    font-size: 20px;
+    margin-top: 10px;
+    gap: 30px;
+}
+.copy{
+    text-align: center;
+    font-weight: 300;
+    margin-top: -35px;
+}

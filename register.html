@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../css/register.css">
+</head>
+<body>
+    <form>
+        <div class="form-box active" id="register-form">
+            <div class="box">
+                <div class="hed">
+                    <h2>Sign Up</h2>
+                    <button class="close-btn">&times;</button>
+                </div>
+                <div class="labels">
+                    <h3>Name</h3>
+                    <input type="text" placeholder="enter your name" required>
+                    <h3>email</h3>
+                    <input type="email" placeholder="enter your email" required>
+                    <h3>password</h3>
+                    <input type="password" placeholder="enter your password" required>
+                    <h3>Re-enter your password</h3>
+                    <input type="password" placeholder="re-enter your password" required>
+                    <div class="remember">
+                        <input type="checkbox">
+                        <a href="">terms & conditions</a>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" class="signup-btn" id="btn">SignUp</button>
+                    </div>
+                    <div class="acc">
+                        <p>Already have account ?</p>
+                        <a href="#" onclick="showForm('login-form')">LogIn</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-box" id="login-form">
+            <div class="box">
+                <h2>Log In</h2>
+                <div class="labels">
+                    <h3>email</h3>
+                    <input type="email" placeholder="enter your email" required>
+                    <h3>password</h3>
+                    <input type="password" placeholder="enter your password" required>
+                    <div class="remember">
+                        <input type="checkbox">
+                        <a href="">remember me</a>
+                    </div>
+                    <div class="btn">
+                        <button type="submit" class="signup-btn">LogIn</button>
+                    </div>
+                    <div class="acc">
+                        <p>Don't have account ?</p>
+                        <a href="#" onclick="showForm('register-form')">SignUp</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </form>
+    <script src="../java/script.js"></script>
+</body>
+</html>
